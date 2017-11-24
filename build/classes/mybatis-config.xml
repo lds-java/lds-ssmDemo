@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration  
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 可以写一些全局性配置 -->
+	<typeAliases>
+		<typeAlias type="utils.Pager" alias="pager"/>
+		<typeAlias type="com.alibaba.fastjson.JSONObject" alias="json"/>
+		<typeAlias type="icf.model.AnswerSheet" alias="answerSheet"/>
+		<typeAlias type="java.util.List" alias="list"/>
+	</typeAliases>
+	<!-- mapping 文件路径配置不用在这里配置，用自动扫描加载 -->
+</configuration>

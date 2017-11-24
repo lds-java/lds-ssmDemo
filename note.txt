@@ -1,0 +1,67 @@
+@Service用于标注业务层组件、
+
+@Controller用于标注控制层组件（如struts中的action）、
+
+@Repository用于标注数据访问组件，即DAO组件。
+
+@Component泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注。 这四种注解仅仅是角色不同，但实质都一样。
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<mvc:annotation-driven />需要一个关于hibernate的jar包，在项目中引入 hibernate-validator-4.3.1.Final.jar 这个包之后，就可以正常启动了，所以ssm
+项目中，web层的扫描驱动用<context:annotation-config />
+
+
+
+  2.mapper动态代理实现的原理：
+
+    mapper接口开发方式，只需要程序员编写mapper接口（相当于Dao接口），有mybatis框架根据接口定义创建接口的动态代理对象，代理的方法体与上面Dao实现类中的方法体相类似
+
+ Mapper接口开发要符合一下规范：
+
+     1.Mapper.xml中namespace路径与mapper接口路径相同
+
+     2.mapper接口中的方法名，与Mapper.xml中对应statement的id相同
+
+     3.mapper接口中方法的输入参数类型和mapper.xml中定义的对应sql的ParameterType的类型相同
+
+     4.mapper接口中方法的返回值类型和mapper.xml中定义的对应sql的ResultType的类型相同
+  -----------------------------------------------------------------------------------------------------------------------------------------
+     mybatis与spring整合时的不写实现类配置方法：
+     
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" 
+		p:basePackage="icf.dao" 
+		p:sqlSessionFactoryBeanName="sqlSessionFactory" />
+     这段配置是将代理类交由spring管理，也就是说由spring创建代理类的对象。
+     ===============================================================================
+     
+     
+     utils:
+     
+ ================================================JSON
+ 
+ 
+ 
+ 
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
